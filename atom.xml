@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>惊鸿一瞥</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-06-20T16:13:35.760Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Yang Yan</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo+Github搭建个人博客笔记</title>
+    <link href="http://yoursite.com/2016/06/20/Hexo-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2016/06/20/Hexo-Github搭建个人博客笔记/</id>
+    <published>2016-06-20T15:10:54.000Z</published>
+    <updated>2016-06-20T16:13:35.760Z</updated>
+    
+    <content type="html">&lt;p&gt;之前看到好多人都在github上托管自己的博客，用markdown编辑的，弄得都挺好的，可羡慕了，一直想也要自己弄弄玩玩。网上一搜好多中方法搭建自己的博客&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 Github Pages搭建&lt;/li&gt;
+&lt;li&gt;使用 jekyll 搭建&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最终自己选择用Hexo+Github这种方式，于是自己在周末花了大半天的时间终于搭建好了自己的个人博客，啦啦啦啦就是本博客啦，瞬间觉得自己比格高了起来，瞬间觉得自己对得起程序媛这个称号了。下面跟大家分享一下如何搭建自己的个人博客，网上也有很多的参考资料，这里主要是我的比较粗略的笔记，希望对大家有所帮助。&lt;/p&gt;
+&lt;h2 id=&quot;快速入门&quot;&gt;&lt;a href=&quot;#快速入门&quot; class=&quot;headerlink&quot; title=&quot;快速入门&quot;&gt;&lt;/a&gt;快速入门&lt;/h2&gt;&lt;h3 id=&quot;安装git的windows版本&quot;&gt;&lt;a href=&quot;#安装git的windows版本&quot; class=&quot;headerlink&quot; title=&quot;安装git的windows版本&quot;&gt;&lt;/a&gt;安装git的windows版本&lt;/h3&gt;&lt;p&gt;可以参考我之前写过的一篇博客 &lt;a href=&quot;http://blog.csdn.net/huluedeai/article/details/51367852&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git学习-安装&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;安装node-js&quot;&gt;&lt;a href=&quot;#安装node-js&quot; class=&quot;headerlink&quot; title=&quot;安装node.js&quot;&gt;&lt;/a&gt;安装node.js&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;node-v4.4.5-x64.msi&lt;/a&gt;&lt;br&gt;安装完成后再命令行输入以下命令查看安装成功否：&lt;br&gt;node -v&lt;br&gt;npm -v&lt;/p&gt;
+&lt;h3 id=&quot;安装-hexo&quot;&gt;&lt;a href=&quot;#安装-hexo&quot; class=&quot;headerlink&quot; title=&quot;安装 hexo&quot;&gt;&lt;/a&gt;安装 hexo&lt;/h3&gt;&lt;p&gt;在cmd命令行&lt;br&gt;npm install -g hexo&lt;br&gt;然后更新hexo&lt;br&gt;npm update -g hexo&lt;/p&gt;
+&lt;p&gt;安装完成后再命令行查看是否安装成功：&lt;br&gt;hexo -v&lt;/p&gt;
+&lt;p&gt;以下操作都可以到git bash下运行, 因为最后要把博客托管到github服务器上, 进入你想要创建博客的目录 eg ：MyGitBlog/hexo&lt;/p&gt;
+&lt;h3 id=&quot;部署-hexo&quot;&gt;&lt;a href=&quot;#部署-hexo&quot; class=&quot;headerlink&quot; title=&quot;部署 hexo&quot;&gt;&lt;/a&gt;部署 hexo&lt;/h3&gt;&lt;p&gt;cd  MyGitBlog/hexo&lt;br&gt;hexo init&lt;/p&gt;
+&lt;p&gt;Hexo会自动在目标文件夹中建立网站所需的所有文件。&lt;/p&gt;
+&lt;p&gt;安装依赖包：&lt;br&gt;npm instll&lt;/p&gt;
+&lt;p&gt;至此，博客搭建成功！当然仅仅是本地的了，此时执行：&lt;br&gt;hexo g&lt;br&gt;即可生成静态页面，然后执行&lt;br&gt;hexo s&lt;/p&gt;
+&lt;p&gt;访问 &lt;a href=&quot;http://localhost:4000&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:4000&lt;/a&gt; 即可看到你的博客。&lt;/p&gt;
+&lt;p&gt;但是上面的页面只是限于你本机使用，别人无法访问。有服务器的可以把他配置到服务骑上，这里采用的是提交到github，由他来托管。就可以方便的访问了。&lt;/p&gt;
+&lt;h3 id=&quot;部署-静态页面到Github&quot;&gt;&lt;a href=&quot;#部署-静态页面到Github&quot; class=&quot;headerlink&quot; title=&quot;部署 静态页面到Github&quot;&gt;&lt;/a&gt;部署 静态页面到Github&lt;/h3&gt;&lt;p&gt;在github上建立一个仓库：用户名.github.io 的仓库。如github用户名为：txadf,仓库为：txadf.github.io 地址为 ：&lt;a href=&quot;https://github.com/txadf/txadf.github.io.git&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/txadf/txadf.github.io.git&lt;/a&gt;&lt;br&gt;然后打开blog 文件夹下的 _config.yml 文件，在最后修改为如下代码：&lt;br&gt;deploy:&lt;br&gt;  type: git&lt;br&gt;  repo: &lt;a href=&quot;https://github.com/txadf/txadf.github.io.git&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/txadf/txadf.github.io.git&lt;/a&gt;&lt;br&gt;  branch: master&lt;/p&gt;
+&lt;p&gt;Note： type: 后面有空格&lt;/p&gt;
+&lt;p&gt;注意还要用下面命令：安装 hexo-deployer-git，否则会出现Deployer not found：git的error。&lt;br&gt;npm install hexo-deployer-git –save&lt;/p&gt;
+&lt;p&gt;最后运行命令：hexo deploy&lt;/p&gt;
+&lt;p&gt;于是发现你当前本地目录的文件更新到github上了。 happy ing.&lt;/p&gt;
+&lt;p&gt;查看页面：&lt;a href=&quot;https://txadf.github.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://txadf.github.io/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Tips&quot;&gt;&lt;a href=&quot;#Tips&quot; class=&quot;headerlink&quot; title=&quot;Tips&quot;&gt;&lt;/a&gt;Tips&lt;/h3&gt;&lt;p&gt;Hexo部署时出现“ERROR Deployer not found: git”的解决办法&lt;br&gt;网上关于此错误的解决办法已经过时了，因为新安装的 Hexo 出现这种问题并不是因为 _config.yml 文件中deploy项的type被误写为github，正确地写成”type: git”在执行“hexo d”命令时依然出现这个问题。&lt;br&gt;一开始我也是百思不得其解，后来发现是因为没有安装 hexo-deployer-git。&lt;br&gt;在命令行中执行“npm install hexo-deployer-git –save”命令，完成后再执行“hexo d”你会发现这个问题已经轻松地解决了。&lt;br&gt;遇到问题后建议先去翻一翻官方文档，看看是不是自己疏忽了什么，别直接去找答案，因为即便是大牛给出的答案，也有可能是过时的（或牛头不对马嘴的）。&lt;br&gt;另附 Hexo中文文档 地址：&lt;a href=&quot;https://hexo.io/zh-cn/docs/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://hexo.io/zh-cn/docs/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考文献：&lt;a href=&quot;http://jingyan.baidu.com/album/9113f81b01c4e72b3214c7d3.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://jingyan.baidu.com/album/9113f81b01c4e72b3214c7d3.html&lt;/a&gt; （有图有真相）&lt;br&gt;最完美的参考：segment fault &lt;a href=&quot;https://segmentfault.com/a/1190000003101692&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://segmentfault.com/a/1190000003101692&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前看到好多人都在github上托管自己的博客，用markdown编辑的，弄得都挺好的，可羡慕了，一直想也要自己弄弄玩玩。网上一搜好多中方法搭建自己的博客&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 Github Pages搭建&lt;/li&gt;
+&lt;li&gt;使用 jek
+    
+    </summary>
+    
+      <category term="Git" scheme="http://yoursite.com/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My First Blog</title>
+    <link href="http://yoursite.com/2016/06/18/My-First-Blog/"/>
+    <id>http://yoursite.com/2016/06/18/My-First-Blog/</id>
+    <published>2016-06-18T15:02:37.000Z</published>
+    <updated>2016-06-21T14:30:08.075Z</updated>
+    
+    <content type="html">&lt;p&gt;This is my first blog. I am so exciting!!!&lt;/p&gt;
+&lt;p&gt;在接下来的日子里，我会好好维护这个博客，我会在博客里记录以下几方面的内容&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;工作中遇到的问题&lt;/li&gt;
+&lt;li&gt;学习的新技术&lt;/li&gt;
+&lt;li&gt;工作总结和生活感悟&lt;/li&gt;
+&lt;li&gt;读书笔记&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;我的CSDN博客惊鸿一瞥&quot;&gt;&lt;a href=&quot;#我的CSDN博客惊鸿一瞥&quot; class=&quot;headerlink&quot; title=&quot;我的CSDN博客惊鸿一瞥&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://blog.csdn.net/huluedeai&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;我的CSDN博客惊鸿一瞥&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;十分感谢您花费时间阅读这篇博客!&lt;/p&gt;
+&lt;p&gt;作者 [@Yang Yan][3]&lt;br&gt;2016-06-18&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This is my first blog. I am so exciting!!!&lt;/p&gt;
+&lt;p&gt;在接下来的日子里，我会好好维护这个博客，我会在博客里记录以下几方面的内容&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;工作中遇到的问题&lt;/li&gt;
+&lt;li&gt;学习的新技术
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://yoursite.com/categories/Blog/"/>
+    
+    
+  </entry>
+  
+</feed>
