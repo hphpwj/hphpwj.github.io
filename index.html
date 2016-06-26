@@ -260,6 +260,109 @@
             
               
                 
+                <a class="post-title-link" href="/2016/06/26/Hexo-Github搭建个人博客笔记续-主题配置/" itemprop="url">
+                  Hexo+Github搭建个人博客笔记续-主题配置
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-26T17:07:12+08:00" content="2016-06-26">
+              2016-06-26
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Hexo默认的主题如果你不太喜欢的话，可以选择自己喜欢的主题曲安装,可以从这个<a href="https://github.com/hexojs/hexo/wiki/Themes">Hexo主题网站</a>选择  , 点击Demo 链接可以查看每个主题的样子。</p>
+<p>最后我选择的Theme为Next主题，简洁优雅的风格，我很喜欢,下面就开始对博客进行一番改造了。</p>
+<p><a href="http://theme-next.iissnan.com/getting-started.html">Next主题官方文档</a>还算是比较详细,大家可以参考它来进行安装和配置。</p>
+<blockquote>
+<ul>
+<li>Hexo有两份主要的配置文件(_config.yml),一份位于站点目录下称为站点配置文件，一份位于主题目录下称为主题配置文件。</li>
+</ul>
+</blockquote>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/26/Hexo-Github搭建个人博客笔记续-主题配置/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/06/20/Hexo-Github搭建个人博客笔记/" itemprop="url">
                   Hexo+Github搭建个人博客笔记
                 </a>
@@ -322,36 +425,19 @@
 
       
         
-          
-            <p>之前看到好多人都在github上托管自己的博客，用markdown编辑的，弄得都挺好的，可羡慕了，一直想也要自己弄弄玩玩。网上一搜好多中方法搭建自己的博客</p>
+          <p>之前看到好多人都在github上托管自己的博客，用markdown编辑的，弄得都挺好的，可羡慕了，一直想也要自己弄弄玩玩。网上一搜好多中方法搭建自己的博客</p>
 <blockquote>
 <ul>
 <li>使用 Github Pages搭建</li>
 <li>使用 jekyll 搭建</li>
 </ul>
 </blockquote>
-<p>最终自己选择用Hexo+Github这种方式，于是自己在周末花了大半天的时间终于搭建好了自己的个人博客，啦啦啦啦就是本博客啦，瞬间觉得自己比格高了起来，瞬间觉得自己对得起程序媛这个称号了。下面跟大家分享一下如何搭建自己的个人博客，网上也有很多的参考资料，这里主要是我的比较粗略的笔记，希望对大家有所帮助。</p>
-<h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><h3 id="安装git的windows版本"><a href="#安装git的windows版本" class="headerlink" title="安装git的windows版本"></a>安装git的windows版本</h3><p>可以参考我之前写过的一篇博客 <a href="http://blog.csdn.net/huluedeai/article/details/51367852" target="_blank" rel="external">Git学习-安装</a></p>
-<h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p><a href="https://nodejs.org/en/" target="_blank" rel="external">node-v4.4.5-x64.msi</a><br>安装完成后再命令行输入以下命令查看安装成功否：<br>node -v<br>npm -v</p>
-<h3 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h3><p>在cmd命令行<br>npm install -g hexo<br>然后更新hexo<br>npm update -g hexo</p>
-<p>安装完成后再命令行查看是否安装成功：<br>hexo -v</p>
-<p>以下操作都可以到git bash下运行, 因为最后要把博客托管到github服务器上, 进入你想要创建博客的目录 eg ：MyGitBlog/hexo</p>
-<h3 id="部署-hexo"><a href="#部署-hexo" class="headerlink" title="部署 hexo"></a>部署 hexo</h3><p>cd  MyGitBlog/hexo<br>hexo init</p>
-<p>Hexo会自动在目标文件夹中建立网站所需的所有文件。</p>
-<p>安装依赖包：<br>npm instll</p>
-<p>至此，博客搭建成功！当然仅仅是本地的了，此时执行：<br>hexo g<br>即可生成静态页面，然后执行<br>hexo s</p>
-<p>访问 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 即可看到你的博客。</p>
-<p>但是上面的页面只是限于你本机使用，别人无法访问。有服务器的可以把他配置到服务骑上，这里采用的是提交到github，由他来托管。就可以方便的访问了。</p>
-<h3 id="部署-静态页面到Github"><a href="#部署-静态页面到Github" class="headerlink" title="部署 静态页面到Github"></a>部署 静态页面到Github</h3><p>在github上建立一个仓库：用户名.github.io 的仓库。如github用户名为：txadf,仓库为：txadf.github.io 地址为 ：<a href="https://github.com/txadf/txadf.github.io.git" target="_blank" rel="external">https://github.com/txadf/txadf.github.io.git</a><br>然后打开blog 文件夹下的 _config.yml 文件，在最后修改为如下代码：<br>deploy:<br>  type: git<br>  repo: <a href="https://github.com/txadf/txadf.github.io.git" target="_blank" rel="external">https://github.com/txadf/txadf.github.io.git</a><br>  branch: master</p>
-<p>Note： type: 后面有空格</p>
-<p>注意还要用下面命令：安装 hexo-deployer-git，否则会出现Deployer not found：git的error。<br>npm install hexo-deployer-git –save</p>
-<p>最后运行命令：hexo deploy</p>
-<p>于是发现你当前本地目录的文件更新到github上了。 happy ing.</p>
-<p>查看页面：<a href="https://txadf.github.io/" target="_blank" rel="external">https://txadf.github.io/</a></p>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>Hexo部署时出现“ERROR Deployer not found: git”的解决办法<br>网上关于此错误的解决办法已经过时了，因为新安装的 Hexo 出现这种问题并不是因为 _config.yml 文件中deploy项的type被误写为github，正确地写成”type: git”在执行“hexo d”命令时依然出现这个问题。<br>一开始我也是百思不得其解，后来发现是因为没有安装 hexo-deployer-git。<br>在命令行中执行“npm install hexo-deployer-git –save”命令，完成后再执行“hexo d”你会发现这个问题已经轻松地解决了。<br>遇到问题后建议先去翻一翻官方文档，看看是不是自己疏忽了什么，别直接去找答案，因为即便是大牛给出的答案，也有可能是过时的（或牛头不对马嘴的）。<br>另附 Hexo中文文档 地址：<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/index.html</a></p>
-<p>参考文献：<a href="http://jingyan.baidu.com/album/9113f81b01c4e72b3214c7d3.html" target="_blank" rel="external">http://jingyan.baidu.com/album/9113f81b01c4e72b3214c7d3.html</a> （有图有真相）<br>最完美的参考：segment fault <a href="https://segmentfault.com/a/1190000003101692" target="_blank" rel="external">https://segmentfault.com/a/1190000003101692</a></p>
-
-          
+<p>最终自己选择用Hexo+Github这种方式，于是自己在周末花了大半天的时间终于搭建好了自己的个人博客，啦啦啦啦就是本博客啦，瞬间觉得自己比格高了起来，瞬间觉得自己对得起程序媛这个称号了。下面跟大家分享一下如何搭建自己的个人博客，网上也有很多的参考资料，这里主要是我的比较粗略的笔记，希望对大家有所帮助。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/20/Hexo-Github搭建个人博客笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -461,21 +547,19 @@
 
       
         
-          
-            <p>This is my first blog. I am so exciting!!!</p>
+          <p>This is my first blog. I am so exciting!!!</p>
 <p>在接下来的日子里，我会好好维护这个博客，我会在博客里记录以下几方面的内容</p>
 <blockquote>
 <ul>
 <li>工作中遇到的问题</li>
 <li>学习的新技术</li>
 <li>工作总结和生活感悟</li>
-<li>读书笔记</li>
-</ul>
-</blockquote>
-<h3 id="我的CSDN博客惊鸿一瞥"><a href="#我的CSDN博客惊鸿一瞥" class="headerlink" title="我的CSDN博客惊鸿一瞥"></a><a href="http://blog.csdn.net/huluedeai" target="_blank" rel="external">我的CSDN博客惊鸿一瞥</a></h3><p>十分感谢您花费时间阅读这篇博客!</p>
-<p>作者 [@Yang Yan][3]<br>2016-06-18</p>
-
-          
+<li>读书笔记
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/18/My-First-Blog/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -543,7 +627,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -640,6 +724,10 @@
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>
+</div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="footer-inner">本站总访问量 <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp&nbsp
+您是第<span id="busuanzi_value_site_uv"></span>个来到的小伙伴
 </div>
 
         
